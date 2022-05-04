@@ -21,7 +21,7 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
  </div>
  <div class="container">
      <button class="btn btn-secundary" onclick="GetModal('modals.php?modal_id=new_employee')">Add user</button>
-    <table class="table">
+    <table class="table" id="refTable">
         <thead>
             <th>ID</th>
             <th>Datum rodenja</th>

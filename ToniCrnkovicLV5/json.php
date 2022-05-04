@@ -7,7 +7,7 @@ header('Content-type: application/json; charset=utf-8');
 if(isset($_GET['json_id'])){
 switch ($_GET['json_id']) {
     case 'get_all_employees':
-        $sQuery="SELECT * FROM employees LIMIT 50";
+        $sQuery="SELECT * FROM employees ORDER BY emp_no DESC LIMIT 100"; 
         $oStatement = $oConnection->query($sQuery);
         $oEmployees = array();
         while($oRow = $oStatement->fetch(PDO::FETCH_BOTH))

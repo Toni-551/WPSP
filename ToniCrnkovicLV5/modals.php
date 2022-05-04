@@ -30,7 +30,7 @@ switch ($_GET['modal_id']) {
         </div>
         </form>
         <div class="modal-footer">
-        <button type="button" class="btn btn-success btn-s" onclick="">Spremi</button>
+        <button type="button" class="btn btn-success btn-s" onclick="addNewEmployee()">Spremi</button>
         <button type="button" class="btn btn-success btn-s" data-dismiss="modal">Zatvori</button>
         </div>
        </div>';
@@ -60,7 +60,7 @@ switch ($_GET['modal_id']) {
         </div>
         </form>
         <div class="modal-footer">
-        <button type="button" class="btn btn-success btn-s" onclick="">Spremi</button>
+        <button type="button" class="btn btn-success btn-s" onclick="UpdateEmployee('.$_GET['id'].')">Spremi</button>
         <button type="button" class="btn btn-success btn-s" data-dismiss="modal">Zatvori</button>
         </div>
        </div>';
@@ -90,7 +90,7 @@ switch ($_GET['modal_id']) {
         </div>
         </form>
         <div class="modal-footer">
-        <button type="button" class="btn btn-success btn-s" onclick="">Obriši</button>
+        <button type="button" class="btn btn-success btn-s" onclick="DeleteEmployee('.$_GET['id'].')">Obriši</button>
         <button type="button" class="btn btn-success btn-s" data-dismiss="modal">Zatvori</button>
         </div>
        </div>';
