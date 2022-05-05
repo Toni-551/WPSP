@@ -103,8 +103,8 @@ switch ($_GET['modal_id']) {
         </div>
         <form class="form-horizontal">
         <div class="form-group">
-        <label class="col-md-3 control-label">Label</label>
-        <div class="col-md-8"><input type="text" class="form-control" placeholder="" /></div>
+        <label class="col-md-3 control-label">New department name</label>
+        <div class="col-md-8"><input type="text" id="depname" class="form-control" placeholder="" /></div>
         </div>
         </form>
         <div class="modal-footer">
@@ -121,8 +121,8 @@ switch ($_GET['modal_id']) {
         </div>
         <form class="form-horizontal">
         <div class="form-group">
-        <label class="col-md-3 control-label">Label</label>
-        <div class="col-md-8"><input type="text" class="form-control" placeholder="" /></div>
+        <label class="col-md-3 control-label">Department name</label>
+        <div class="col-md-8"><input type="text" value="'.$_GET['ime'].'" class="form-control" placeholder="" /></div>
         </div>
         </form>
         <div class="modal-footer">
@@ -139,12 +139,12 @@ switch ($_GET['modal_id']) {
         </div>
         <form class="form-horizontal">
         <div class="form-group">
-        <label class="col-md-3 control-label">Label</label>
-        <div class="col-md-8"><input type="text" class="form-control" placeholder="" /></div>
+        <label class="col-md-3 control-label">Department name</label>
+        <div class="col-md-8"><input type="text" value="'.$_GET['ime'].'" class="form-control" placeholder="" disabled/></div>
         </div>
         </form>
         <div class="modal-footer">
-        <button type="button" class="btn btn-success btn-s" onclick="">Spremi</button>
+        <button type="button" class="btn btn-success btn-s" onclick="">Obriši</button>
         <button type="button" class="btn btn-success btn-s" data-dismiss="modal">Zatvori</button>
         </div>
        </div>';

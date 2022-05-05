@@ -19,6 +19,26 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
  <div class="row">
  </div>
  </div>
- <script src="js/odjeli.js"></script>
+ <div class="container">
+     <button class="btn btn-primary" onclick="GetModal('modals.php?modal_id=new_department')">Add department</button>
+    <table class="table" id="refTable">
+        <thead>
+            <th>ID</th>
+            <th>Ime odjela</th>
+            <th>Uredi</th>
+            <th>Obriši</th>
+        </thead>
+        <tbody id="tbodi">
+        </tbody>
+    </table>
+</div>
+<div class="modal fade" id="modals" tabindex="-1" role="dialog" aria-labelledby=""
+aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content"></div>
+ </div>
+</div>
+ <script src="js/odjel.js"></script>
+ <script src="js/globals.js"></script>
 </body>
 </html>
