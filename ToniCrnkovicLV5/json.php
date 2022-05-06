@@ -18,7 +18,7 @@ switch ($_GET['json_id']) {
        echo json_encode($oEmployees);
         break;
     case 'get_all_departments':
-        $sQuery="SELECT * FROM departments";
+        $sQuery="SELECT * FROM departments ORDER BY dept_no";
         $oStatement = $oConnection->query($sQuery);
         $Departments= array();
         while($oRow = $oStatement->fetch(PDO::FETCH_BOTH))

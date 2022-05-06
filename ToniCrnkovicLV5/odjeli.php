@@ -38,6 +38,7 @@ aria-hidden="true">
  <div class="modal-content"></div>
  </div>
 </div>
+
  <script src="js/odjel.js"></script>
  <script src="js/globals.js"></script>
 </body>

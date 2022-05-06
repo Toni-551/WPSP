@@ -45,7 +45,11 @@ function addNewEmployee(){
         },
         success: function (oData)
         {
-            location.reload();
+            if(oData != ""){
+                console.log(oData);
+            }else{
+                location.reload();
+            }
         },
         error: function (XMLHttpRequest, textStatus, exception) {
             console.log("Ajax failure\n" + exception);
@@ -70,8 +74,11 @@ function UpdateEmployee(nEmployeeID){
         },
         success: function (oData)
         {
-            alert(oData);
-            location.reload();
+            if(oData != ""){
+                console.log(oData);
+            }else{
+                location.reload();
+            }
         },
         error: function (XMLHttpRequest, textStatus, exception) {
             console.log("Ajax failure\n" + exception);
@@ -90,14 +97,15 @@ function DeleteEmployee(nEmployeeID) {
         },
         success: function (oData)
         {
-            location.reload();
+            if(oData != ""){
+                console.log(oData);
+            }else{
+                location.reload();
+            }
         },
         error: function (XMLHttpRequest, textStatus, exception) {
             console.log("Ajax failure\n" + exception);
         },
-        complete: function (data) {
-            $('#refTable').ajax.reload(null, false);
-           },
         async: true
        });
 }

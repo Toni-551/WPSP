@@ -11,7 +11,6 @@ switch ($_POST['choice']) {
     }
     case "UpdateEmployee":{
         $sQuery ="UPDATE employees SET first_name='".$_POST['name']."', last_name='".$_POST['lastName']."', birth_date='".$_POST['birth']."', gender='".$_POST['gender']."' WHERE emp_no=".$_POST['id'];
-        echo($sQuery);
         $oStatement = $oConnection->query($sQuery);
         break;
     }
@@ -19,9 +18,24 @@ switch ($_POST['choice']) {
         $sQuery="DELETE FROM employees WHERE emp_no=".$_POST['id'];
         $oStatement = $oConnection->query($sQuery);
         break;
-    }   
+    }
+    case "NewDepartmente":{
+        $sQuery = "INSERT INTO departments (dept_no, dept_name) VALUES ('".$_POST['id']."', '".$_POST['name']."');";
+        $oStatement = $oConnection->query($sQuery);
+        break;
+    }
+    case "UpdateDepartmente":{
+        $sQuery ="UPDATE departments SET dept_name='".$_POST['name']."' WHERE dept_no='".$_POST['id']."';";
+        $oStatement = $oConnection->query($sQuery);
+        break;
+    }
+    case "DeleteDepartmente":{
+        $sQuery='DELETE FROM departments WHERE dept_no="'.$_POST['id'].'";';
+        $oStatement = $oConnection->query($sQuery);
+        break;
+    }  
     default:
-        echo "wrong choice";
+        echo "wrong 'choice'";
         break;
 }
 }else{

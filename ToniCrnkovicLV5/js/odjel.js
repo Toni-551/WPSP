@@ -28,3 +28,87 @@ function LoadDepartments(){
     
 }
 $(document).ready(LoadDepartments());
+
+function addNewDepartmente(){
+    var no=obj[obj.length-1].dept_no.substring(1);
+    var id=parseInt(no)+1;
+    if (id<10) {
+        id="d00"+id;
+    }else if(id<99){
+        id="d0"+id;
+    }else{
+        id="d"+id;
+    }
+    console.log(id);
+    $.ajax({
+        url: 'actions.php',
+        type: 'POST',
+        data:
+        {
+            "choice": "NewDepartmente",
+            "id": id,
+            "name": $('#depname').val()
+        },
+        success: function (oData)
+        {
+            if(oData != ""){
+                console.log(oData);
+            }else{
+                location.reload();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, exception) {
+            console.log("Ajax failure\n" + exception);
+        },
+        async: true
+    });
+       
+}
+function UpdateDepartment(nDepartmenteID){
+    $.ajax({
+        url: 'actions.php',
+        type: 'POST',
+        data:
+        {
+            "choice": "UpdateDepartmente",
+            "id": nDepartmenteID,
+            "name": $('#depname').val()
+        },
+        success: function (oData)
+        {   
+            if(oData != ""){
+                console.log(oData);
+            }else{
+                location.reload();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, exception) {
+            console.log("Ajax failure\n" + exception);
+        },
+        async: true
+       });
+}
+function DeleteDepartment(nDepartmenteID) {
+    $.ajax({
+        url: 'actions.php',
+        type: 'POST',
+        data:
+        {
+            "choice": "DeleteDepartmente",
+            "id": nDepartmenteID
+        },
+        success: function (oData)
+        {
+            if(oData != ""){
+                console.log(oData);
+            }else{
+                location.reload();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, exception) {
+            console.log("Ajax failure\n" + exception);
+        },
+        async: true
+    });
+}
+

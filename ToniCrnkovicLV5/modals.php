@@ -108,7 +108,7 @@ switch ($_GET['modal_id']) {
         </div>
         </form>
         <div class="modal-footer">
-        <button type="button" class="btn btn-success btn-s" onclick="">Spremi</button>
+        <button type="button" class="btn btn-success btn-s" onclick="addNewDepartmente()">Spremi</button>
         <button type="button" class="btn btn-success btn-s" data-dismiss="modal">Zatvori</button>
         </div>
        </div>';
@@ -122,11 +122,11 @@ switch ($_GET['modal_id']) {
         <form class="form-horizontal">
         <div class="form-group">
         <label class="col-md-3 control-label">Department name</label>
-        <div class="col-md-8"><input type="text" value="'.$_GET['ime'].'" class="form-control" placeholder="" /></div>
+        <div class="col-md-8"><input type="text" id="depname" value="'.$_GET['ime'].'" class="form-control" placeholder="" /></div>
         </div>
         </form>
         <div class="modal-footer">
-        <button type="button" class="btn btn-success btn-s" onclick="">Spremi</button>
+        <button type="button" class="btn btn-success btn-s" onclick="UpdateDepartment( \''.$_GET['id'].'\')">Spremi</button>
         <button type="button" class="btn btn-success btn-s" data-dismiss="modal">Zatvori</button>
         </div>
        </div>';
@@ -140,11 +140,11 @@ switch ($_GET['modal_id']) {
         <form class="form-horizontal">
         <div class="form-group">
         <label class="col-md-3 control-label">Department name</label>
-        <div class="col-md-8"><input type="text" value="'.$_GET['ime'].'" class="form-control" placeholder="" disabled/></div>
+        <div class="col-md-8"><input type="text" value="'.$_GET['ime'].'" class="form-control"  ></div>
         </div>
         </form>
         <div class="modal-footer">
-        <button type="button" class="btn btn-success btn-s" onclick="">Obriši</button>
+        <button type="button" class="btn btn-success btn-s" onclick="DeleteDepartment( \''.$_GET['id'].'\')">Obriši</button>
         <button type="button" class="btn btn-success btn-s" data-dismiss="modal">Zatvori</button>
         </div>
        </div>';
